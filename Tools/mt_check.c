@@ -1,38 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mt_atoi.c                                          :+:      :+:    :+:   */
+/*   mt_check.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/03 00:16:10 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/03 00:27:45 by zlaarous         ###   ########.fr       */
+/*   Created: 2023/01/03 00:29:20 by zlaarous          #+#    #+#             */
+/*   Updated: 2023/01/03 00:29:53 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../includes/minitalk.h"
 
-int	mt_atoi(char *str)
+int	mt_check(int nbr, int sign)
 {
-	size_t	i;
-	size_t	nbr;
-	int		symb;
-
-	symb = 1;
-	i = 0;
-	nbr = 0;
-	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		symb = str[i];
-		i++;
-	}
-	while (str[i] && (str[i] >= '0') && (str[i] <= '9'))
-	{
-		nbr *= 10;
-		nbr += str[i] - '0';
-		i++;
-	}
-	return (mt_check(nbr, symb));
+	if (sign == '-')
+		return (nbr * -1);
+	else
+		return (nbr);
 }
