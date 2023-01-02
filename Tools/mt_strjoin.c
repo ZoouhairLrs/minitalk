@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   mt_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inf <inf@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 19:13:20 by inf               #+#    #+#             */
-/*   Updated: 2023/01/02 19:44:19 by inf              ###   ########.fr       */
+/*   Updated: 2023/01/02 22:13:35 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Headers/minitalk.h"
+# include "Headers/minitalk.h"
 
 char	*mt_strjoin(char *s1, char *s2)
 {

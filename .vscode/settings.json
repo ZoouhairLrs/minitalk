@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "mt_atoi": "c"
+        "mt_atoi": "c",
+        "stdlib.h": "c"
     }
 }

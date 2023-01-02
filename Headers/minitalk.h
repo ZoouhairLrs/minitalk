@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inf <inf@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 19:12:10 by inf               #+#    #+#             */
-/*   Updated: 2023/01/02 19:12:39 by inf              ###   ########.fr       */
+/*   Updated: 2023/01/02 22:16:04 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,18 @@
 # include <unistd.h>
 # include <signal.h>
 # include <stdlib.h>
+
+//Tools headers :
+int	mt_atoi(char *c);
+int	mt_check(int nbr, int sign);
+int	mt_convert_to_decimal(int binary);
+void	mt_putchar(char c);
+void	mt_putnbr(int nb);
+void	mt_putstr(char *str);
+char	*mt_strjoin(char *s1, char *s2);
+int	mt_strlen(char *str);
+
+//Mendatory :
 
 
 #endif

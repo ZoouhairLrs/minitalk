@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   mt_check.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inf <inf@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 19:09:28 by inf               #+#    #+#             */
-/*   Updated: 2023/01/02 19:44:01 by inf              ###   ########.fr       */
+/*   Updated: 2023/01/02 22:13:20 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Headers/minitalk.h"
+# include "Headers/minitalk.h"
 
 int	mt_check(int nbr, int sign)
 {

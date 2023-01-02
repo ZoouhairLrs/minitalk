@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   mt_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inf <inf@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 19:18:25 by inf               #+#    #+#             */
-/*   Updated: 2023/01/02 19:47:30 by inf              ###   ########.fr       */
+/*   Updated: 2023/01/02 22:13:29 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Headers/minitalk.h"
+# include "Headers/minitalk.h"
 
 void	mt_putnbr(int nb)
 {

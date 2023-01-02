@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   mt_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inf <inf@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 19:08:26 by inf               #+#    #+#             */
-/*   Updated: 2023/01/02 19:44:15 by inf              ###   ########.fr       */
+/*   Updated: 2023/01/02 22:13:32 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Headers/minitalk.h"
+# include "Headers/minitalk.h"
 
 void	mt_putstr(char *str)
 {
