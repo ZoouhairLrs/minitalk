@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 19:14:54 by inf               #+#    #+#             */
-/*   Updated: 2023/01/02 22:13:24 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/02 22:55:18 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Headers/minitalk.h"
+# include "../includes/minitalk.h"
 
 int	mt_convert_to_decimal(int binary)
 {

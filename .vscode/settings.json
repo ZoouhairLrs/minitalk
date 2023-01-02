@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "mt_atoi": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "minitalk.h": "c"
     }
 }

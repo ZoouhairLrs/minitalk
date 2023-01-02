@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 19:13:20 by inf               #+#    #+#             */
-/*   Updated: 2023/01/02 22:13:35 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/02 22:58:13 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Headers/minitalk.h"
+# include "../includes/minitalk.h"
 
 char	*mt_strjoin(char *s1, char *s2)
 {
@@ -25,7 +25,7 @@ char	*mt_strjoin(char *s1, char *s2)
 	}
 	if (!s1 || !s2)
 		return (NULL);
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	str = (char *)malloc(sizeof(char) * (mt_strlen(s1) + mt_strlen(s2) + 1));
 	if (!str)
 		return (NULL);
 	i = -1;
@@ -35,7 +35,7 @@ char	*mt_strjoin(char *s1, char *s2)
 			str[i] = s1[i];
 	while (s2[j] != '\0')
 			str[i++] = s2[j++];
-	str[ft_strlen(s1) + ft_strlen(s2)] = '\0';
+	str[mt_strlen(s1) + mt_strlen(s2)] = '\0';
 	free(s1);
 	return (str);
 }

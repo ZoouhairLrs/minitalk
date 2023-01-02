@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 19:18:25 by inf               #+#    #+#             */
-/*   Updated: 2023/01/02 22:13:29 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/02 22:55:18 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Headers/minitalk.h"
+# include "../includes/minitalk.h"
 
 void	mt_putnbr(int nb)
 {

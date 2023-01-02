@@ -1,33 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   mt_atoi                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/02 19:12:10 by inf               #+#    #+#             */
-/*   Updated: 2023/01/02 22:16:04 by zlaarous         ###   ########.fr       */
+/*   Created: 2023/01/02 19:10:07 by inf               #+#    #+#             */
+/*   Updated: 2023/01/02 22:55:18 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
+# include "../includes/minitalk.h"
 
-# include <unistd.h>
-# include <signal.h>
-# include <stdlib.h>
+int	mt_atoi(char *c)
+{
+	size_t	i;
+	size_t	nbr;
+	int		symb;
 
-//Tools headers :
-int	mt_atoi(char *c);
-int	mt_check(int nbr, int sign);
-int	mt_convert_to_decimal(int binary);
-void	mt_putchar(char c);
-void	mt_putnbr(int nb);
-void	mt_putstr(char *str);
-char	*mt_strjoin(char *s1, char *s2);
-int	mt_strlen(char *str);
-
-//Mendatory :
-
-
-#endif
+	symb = 1;
+	i = 0;
+	nbr = 0;
+	while (c[i] == 32 || (c[i] >= 9 && c[i] <= 13))
+		i++;
+	if (c[i] == '-' || c[i] == '+')
+	{
+		symb = c[i];
+		i++;
+	}
+	while (c[i] && (c[i] >= '0') && (c[i] <= '9'))
+	{
+		nbr *= 10;
+		nbr += c[i] - '0';
+		i++;
+	}
+	return (mt_check(nbr, symb));
+}
