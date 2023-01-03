@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
+/*   By: inf <inf@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 19:51:32 by inf               #+#    #+#             */
-/*   Updated: 2023/01/02 23:18:06 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/03 02:57:44 by inf              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minitalk.h"
 
 
-void	signal_handler(int check)
+void	signal_handler()
 {
 	static char	*store;
 
-	if (check == SIGUSR1)
+	if (mt_check == SIGUSR1)
 		store = mt_strjoin(store, "1");
-	if (check == SIGUSR2)
+	if (mt_check == SIGUSR2)
 		store = mt_strjoin(store, "0");
 	if (mt_strlen(store) == 8)
 	{
