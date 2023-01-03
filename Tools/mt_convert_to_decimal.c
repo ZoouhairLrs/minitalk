@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 00:15:40 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/03 00:15:49 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/03 14:51:18 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ int	mt_convert_to_decimal(int binary)
 		binary = binary / 10;
 		base = base * 2;
 	}
-	if (decimal > 127 || decimal < 0)
-	{
-		mt_putstr("\nError Recieving the signal\n");
-		exit(0);
-	}
-	else
+	// if (decimal > 127 || decimal < 0)
+	// {
+	// 	mt_putstr("\nError Recieving the signal\n");
+	// 	exit(0);
+	// }
+	// else
 		return (decimal);
 }
