@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mt_convert_to_decimal.c                            :+:      :+:    :+:   */
+/*   mt_itod.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 00:15:40 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/03 14:51:18 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/05 17:12:08 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../includes/minitalk.h"
 
-int	mt_convert_to_decimal(int binary)
+int	mt_btod(int binary)
 {
 	int	decimal;
 	int	base;

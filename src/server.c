@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 19:51:32 by inf               #+#    #+#             */
-/*   Updated: 2023/01/05 16:57:29 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/05 17:12:48 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	signal_handler(int checking)
 		store = mt_strjoin(store, "0");
 	if (mt_strlen(store) == 8)
 	{
-		mt_putchar(mt_convert_to_decimal(mt_atoi(store)));
+		mt_putchar(mt_btod(mt_atoi(store)));
 		store = NULL;
 	}
 	// printf("this store : %s\n", store);
