@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 19:51:32 by inf               #+#    #+#             */
-/*   Updated: 2023/01/05 17:12:48 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/05 17:20:25 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main(int ac, char **av)
 	(void)av;
 	if (ac != 1)
 	{
-		mt_putstr("Wrong arguments\n");
+		mt_putstr("Some thing is wrong with arguments\n");
 		return (1);
 	}
 	pid = getpid();
@@ -44,9 +44,9 @@ int	main(int ac, char **av)
 	mt_putstr("\n");
 
 	if ((signal(SIGUSR1, signal_handler)) < 0)
-		mt_putstr("Error recieving the signal\n");
+		mt_putstr("Err.. the signal not recieving!\n");
 	if ((signal(SIGUSR2, signal_handler)) < 0)
-		mt_putstr("Error recieving the signal\n");
+		mt_putstr("Err.. the signal not recieving!\n");
 	while (1)
 		pause();
 }
