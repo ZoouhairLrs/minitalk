@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 00:16:10 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/05 17:11:02 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/05 17:22:50 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ int	mt_atoi(char *str)
 		nbr += str[i] - '0';
 		i++;
 	}
-	return (mt_sing_in(nbr, sign));
+	return (mt_sign_in(nbr, sign));
 }

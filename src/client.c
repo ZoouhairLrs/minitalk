@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 19:46:51 by inf               #+#    #+#             */
-/*   Updated: 2023/01/02 23:04:40 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/05 17:37:59 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	send_bits(char c, int pid)
 			kill(pid, SIGUSR1);
 		else if (x == 0)
 			kill(pid, SIGUSR2);
-		usleep(500);
+		usleep(1000);
 	}
 }
 
@@ -35,7 +35,7 @@ int	main(int ac, char **av)
 	int	i;
 
 	if (ac != 3)
-		return (mt_putstr("Not enough Args\n"), 1);
+		return (mt_putstr("Some this wrong arguments not enough!\n"), 1);
 	else
 	{
 		i = 0;
