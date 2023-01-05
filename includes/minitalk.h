@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 19:12:10 by inf               #+#    #+#             */
-/*   Updated: 2023/01/05 17:12:36 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/05 17:17:26 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 //Tools headers :
 int	mt_atoi(char *c);
-int	mt_sing_in(int nbr, int sign);
+int	mt_sign_in(int nbr, int sign);
 int	mt_btod(int binary);
 void	mt_putchar(char c);
 void	mt_putnbr(int nb);
