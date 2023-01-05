@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 22:16:05 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/05 22:16:13 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/05 22:25:44 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	send_bits(char c, int pid)
 			kill(pid, SIGUSR1);
 		else if (x == 0)
 			kill(pid, SIGUSR2);
-		usleep(1000);
+		usleep(500);
 	}
 }
 
