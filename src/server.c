@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 19:51:32 by inf               #+#    #+#             */
-/*   Updated: 2023/01/03 16:48:17 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/05 16:57:29 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	signal_handler(int checking)
 		mt_putchar(mt_convert_to_decimal(mt_atoi(store)));
 		store = NULL;
 	}
+	// printf("this store : %s\n", store);
 }
 
 int	main(int ac, char **av)
@@ -41,10 +42,11 @@ int	main(int ac, char **av)
 	pid = getpid();
 	mt_putnbr(pid);
 	mt_putstr("\n");
+
 	if ((signal(SIGUSR1, signal_handler)) < 0)
-		write(1, "Error recieving the signal\n", 27);
+		mt_putstr("Error recieving the signal\n");
 	if ((signal(SIGUSR2, signal_handler)) < 0)
-		write(1, "Error recieving the signal\n", 27);
+		mt_putstr("Error recieving the signal\n");
 	while (1)
 		pause();
 }

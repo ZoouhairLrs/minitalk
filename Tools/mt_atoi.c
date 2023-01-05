@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 00:16:10 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/03 00:27:45 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/04 20:00:05 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ int	mt_atoi(char *str)
 {
 	size_t	i;
 	size_t	nbr;
-	int		symb;
+	int		sign;
 
-	symb = 1;
+	sign = 1;
 	i = 0;
 	nbr = 0;
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
-		symb = str[i];
+		sign = str[i];
 		i++;
 	}
 	while (str[i] && (str[i] >= '0') && (str[i] <= '9'))
@@ -34,5 +34,5 @@ int	mt_atoi(char *str)
 		nbr += str[i] - '0';
 		i++;
 	}
-	return (mt_check(nbr, symb));
+	return (mt_check(nbr, sign));
 }
