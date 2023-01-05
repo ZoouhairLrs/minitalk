@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mt_itod.c                                          :+:      :+:    :+:   */
+/*   mt_btod.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/03 00:15:40 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/05 17:12:08 by zlaarous         ###   ########.fr       */
+/*   Created: 2023/01/05 22:16:54 by zlaarous          #+#    #+#             */
+/*   Updated: 2023/01/05 22:17:03 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,18 @@
 
 int	mt_btod(int binary)
 {
-	int	decimal;
-	int	base;
-	int	rem;
-
-	decimal = 0;
+    int dec_value;
+ 	int base;
+	int last_digit;
+ 
+	dec_value = 0;
 	base = 1;
-	while (binary != 0)
+    while (binary) 
 	{
-		rem = binary % 10;
-		decimal = decimal + rem * base;
-		binary = binary / 10;
-		base = base * 2;
-	}
-	// if (decimal > 127 || decimal < 0)
-	// {
-	// 	mt_putstr("\nError Recieving the signal\n");
-	// 	exit(0);
-	// }
-	// else
-		return (decimal);
+        last_digit = binary % 10;
+        binary = binary / 10;
+        dec_value += last_digit * base;
+        base = base * 2;
+    }
+    return (dec_value);
 }
