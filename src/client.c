@@ -6,13 +6,13 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 22:16:05 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/05 23:52:51 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/06 22:11:48 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minitalk.h"
 
-void	send_bits(char c, int pid)
+void	send_signals(char c, int pid)
 {
 	int		i;
 	char	x;
@@ -25,7 +25,7 @@ void	send_bits(char c, int pid)
 			kill(pid, SIGUSR1);
 		else if (x == 0)
 			kill(pid, SIGUSR2);
-		usleep(500);
+		usleep(1000);
 	}
 }
 
@@ -42,12 +42,12 @@ int	main(int ac, char **av)
 		pid = mt_atoi(av[1]);
 		while (av[2][i])
 		{
-			send_bits(av[2][i], pid);
+			send_signals(av[2][i], pid);
 			i++;
 		}
 		if (av[2][i] == '\0')
 		{
-			send_bits(av[2][i], pid);
+			send_signals(av[2][i], pid);
 			sleep(1);
 		}
 	}

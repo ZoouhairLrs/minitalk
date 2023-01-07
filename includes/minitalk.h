@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 22:15:51 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/05 23:52:57 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/07 21:18:37 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	mt_putstr(char *str);
 char	*mt_strjoin(char *s1, char *s2);
 int     mt_strlen(char *str);
 //Mendatory :
-void	signal_handler(int checking);
-void	send_bits(char c, int pid);
+void	signal_handler(int checking, siginfo_t *info);
+void	send_signals(char c, int pid);
 
 #endif
