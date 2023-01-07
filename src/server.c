@@ -6,21 +6,23 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 22:16:27 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/07 21:17:53 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/07 22:47:47 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/minitalk.h"
+# include "../includes/minitalk.h"
+# include <stdio.h>
 
 
 void	signal_handler(int checking, siginfo_t *info)
 {
 	static char	*store;
-	static int client;
-	
-	if(client != info->si_pid)
+	static int client_pid;
+
+	if(client_pid != info->si_pid)
 	{
-		client = info->si_pid;
+		client_pid = info->si_pid;
+		// printf("this is info for client : %d\n", client);
 		store = 0;
 	}
 	if (checking == SIGUSR1)
