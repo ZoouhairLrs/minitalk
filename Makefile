@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 21:18:39 by zlaarous          #+#    #+#              #
-#    Updated: 2023/01/08 21:33:23 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/01/08 22:30:48 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,14 +31,14 @@ SRC_S = server.c
 
 # SRC_SB = server_bonus.c
 
-UTILS = mt_atoi.c,
-		mt_btod.c,
-		mt_putchar.c,
-		mt_putnbr.c,
-		mt_putstr.c,
-		mt_sign_in.c,
-		mt_strjoin.c,
-		mt_strlen.c,
+UTILS = mt_atoi.c \
+		mt_btod.c \
+		mt_putchar.c \
+		mt_putnbr.c \
+		mt_putstr.c \
+		mt_sign_in.c \
+		mt_strjoin.c \
+		mt_strlen.c \
 
 OBJ = ${patsubst %.c, %.o, ${UTILS}}
 
