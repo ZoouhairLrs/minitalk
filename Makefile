@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 21:18:39 by zlaarous          #+#    #+#              #
-#    Updated: 2023/01/08 22:30:48 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/01/09 00:02:13 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,30 +15,30 @@ CC = cc
 
 FLAGS = -Wall -Wextra -Werror
 
-NAME_C = client
+NAME_C = ./src/client
 
-NAME_S = server
+NAME_S = ./src/server
 
 # NAME_CB = client_bonus
 
 # NAME_SB = server_bonus
 
-SRC_C = client.c
+SRC_C = ./src/client.c
 
-SRC_S = server.c
+SRC_S = ./src/server.c
 
 # SRC_CB = client_bonus.c
 
 # SRC_SB = server_bonus.c
 
-UTILS = mt_atoi.c \
-		mt_btod.c \
-		mt_putchar.c \
-		mt_putnbr.c \
-		mt_putstr.c \
-		mt_sign_in.c \
-		mt_strjoin.c \
-		mt_strlen.c \
+UTILS = ./Tools/mt_atoi.c \
+		./Tools/mt_btod.c \
+		./Tools/mt_putchar.c \
+		./Tools/mt_putnbr.c \
+		./Tools/mt_putstr.c \
+		./Tools/mt_sign_in.c \
+		./Tools/mt_strjoin.c \
+		./Tools/mt_strlen.c \
 
 OBJ = ${patsubst %.c, %.o, ${UTILS}}
 
