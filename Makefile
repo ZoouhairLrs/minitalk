@@ -5,10 +5,11 @@
 #                                                     +:+ +:+         +:+      #
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/01/02 19:35:22 by inf               #+#    #+#              #
-#    Updated: 2023/01/08 15:01:02 by zlaarous         ###   ########.fr        #
+#    Created: 2023/01/08 21:18:39 by zlaarous          #+#    #+#              #
+#    Updated: 2023/01/08 21:33:23 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 CC = cc
 
@@ -30,11 +31,16 @@ SRC_S = server.c
 
 # SRC_SB = server_bonus.c
 
-UTILS = ../Tools/*.c
+UTILS = mt_atoi.c,
+		mt_btod.c,
+		mt_putchar.c,
+		mt_putnbr.c,
+		mt_putstr.c,
+		mt_sign_in.c,
+		mt_strjoin.c,
+		mt_strlen.c,
 
 OBJ = ${patsubst %.c, %.o, ${UTILS}}
-
-.PHONY : all clean fclean re
 
 all : ${NAME_C} ${NAME_S}
 
@@ -52,6 +58,9 @@ clean :
 	rm -rf ${OBJ}
 
 fclean : clean
-	rm -rf ${NAME_C} ${NAME_S} ${NAME_SB} ${NAME_CB}
+	rm -rf ${NAME_C} ${NAME_S} 
+# ${NAME_SB} ${NAME_CB}
 
 re : fclean all
+
+.PHONY : all clean fclean re
