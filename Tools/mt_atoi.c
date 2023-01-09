@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 00:16:10 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/05 17:22:50 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/09 17:12:58 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/minitalk.h"
+#include "../includes/minitalk.h"
 
 int	mt_atoi(char *str)
 {

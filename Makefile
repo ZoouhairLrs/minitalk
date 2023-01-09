@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 21:18:39 by zlaarous          #+#    #+#              #
-#    Updated: 2023/01/09 00:02:13 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/01/09 17:05:04 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,9 @@ CC = cc
 
 FLAGS = -Wall -Wextra -Werror
 
-NAME_C = ./src/client
+NAME_C = client
 
-NAME_S = ./src/server
+NAME_S = server
 
 # NAME_CB = client_bonus
 

@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 22:17:11 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/05 22:17:14 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/09 17:14:37 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/minitalk.h"
+#include "../includes/minitalk.h"
 
 void	mt_putchar(char c)
 {

@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 22:17:39 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/05 22:17:41 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/09 17:15:10 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/minitalk.h"
+#include "../includes/minitalk.h"
 
 char	*mt_strjoin(char *s1, char *s2)
 {
