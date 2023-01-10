@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 22:16:27 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/09 17:45:11 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/10 16:42:51 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,24 @@
 
 void	signal_handler(int checking, siginfo_t *info)
 {
-	static char	*store;
+	static char	*pool;
 	static int	client_pid;
 
 	if (client_pid != info->si_pid)
 	{
 		client_pid = info->si_pid;
-		store = 0;
+		pool = 0;
 	}
 	if (checking == SIGUSR1)
-		store = mt_strjoin(store, "1");
+		pool = mt_strjoin(pool, "1");
 	if (checking == SIGUSR2)
-		store = mt_strjoin(store, "0");
-	if (mt_strlen(store) == 8)
+		pool = mt_strjoin(pool, "0");
+	if (mt_strlen(pool) == 8)
 	{
-		mt_putchar(mt_btod(mt_atoi(store)));
-		store = NULL;
+		mt_putchar(mt_btod(mt_atoi(pool)));
+		if (pool)
+			free (pool);
+		pool = NULL;
 	}
 }
 
