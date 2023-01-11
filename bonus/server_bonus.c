@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 23:36:43 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/10 20:08:04 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/11 15:37:58 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ void	signals_handler(int checking, siginfo_t *info)
 	if (mt_strlen(pool) == 8)
 	{
 		mt_putchar(mt_btod(mt_atoi(pool)));
+		if(mt_btod(mt_atoi(pool)) == 0)
+		{
+			kill(client_pid, SIGUSR1);
+		}
 		if (pool)
 			free (pool);
 		pool = NULL;
@@ -46,7 +50,7 @@ int	main(int ac, char **av)
 		mt_putstr("Some thing is wrong with arguments\n");
 		return (1);
 	}
-    act.sa_flags = SA_SIGINFO;
+    // act.sa_flags = SA_SIGINFO;
 	act.sa_handler = (void *)signals_handler;
 	pid = getpid();
 	mt_putnbr(pid);
