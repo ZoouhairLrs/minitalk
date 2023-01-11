@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 23:37:15 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/10 19:29:34 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/11 20:36:20 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <signal.h>
 # include <stdlib.h>
-# include <strings.h>
+# include <strings.h> 
 //Tools headers :
 int		mt_atoi(char *c);
 int		mt_sign_in(int nbr, int sign);
