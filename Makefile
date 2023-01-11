@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 21:18:39 by zlaarous          #+#    #+#              #
-#    Updated: 2023/01/11 18:22:27 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/01/11 20:10:21 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,21 +15,21 @@ CC = cc
 
 FLAGS = -Wall -Wextra -Werror
 
-NAME_C = client
+NAME_CLIENT = client
 
-NAME_S = server
+NAME_SERVER = server
 
-NAME_CB = client_bonus
+NAME_CLIENT_BONUS = client_bonus
 
-NAME_SB = server_bonus
+NAME_SERVER_BONUS = server_bonus
 
-SRC_C = ./src/client.c
+SRC_CLIENT = ./src/client.c
 
-SRC_S = ./src/server.c
+SRC_SERVER = ./src/server.c
 
-SRC_CB = ./bonus/client_bonus.c
+SRC_CLIENT_BONUS = ./bonus/client_bonus.c
 
-SRC_SB = ./bonus/server_bonus.c
+SRC_SERVER_BONUS = ./bonus/server_bonus.c
 
 TOOLS = ./Tools/mt_atoi.c \
 		./Tools/mt_btod.c \
@@ -42,23 +42,23 @@ TOOLS = ./Tools/mt_atoi.c \
 
 OBJ = ${patsubst %.c, %.o, ${TOOLS}}
 
-all : ${NAME_C} ${NAME_S}
+all : ${NAME_CLIENT} ${NAME_SERVER}
 
-${NAME_C} :
-	${CC} ${FLAGS} ${SRC_C} ${TOOLS} -o ${NAME_C}
+${NAME_CLIENT} :
+	${CC} ${FLAGS} ${SRC_CLIENT} ${TOOLS} -o ${NAME_CLIENT}
 
-${NAME_S} :
-	${CC} ${FLAGS} ${SRC_S} ${TOOLS} -o ${NAME_S}
+${NAME_SERVER} :
+	${CC} ${FLAGS} ${SRC_SERVER} ${TOOLS} -o ${NAME_SERVER}
 
 bonus : all
-	${CC} ${FLAGS} ${SRC_SB} ${TOOLS} -o ${NAME_SB}
-	${CC} ${FLAGS} ${SRC_CB} ${TOOLS} -o ${NAME_CB}
+	${CC} ${FLAGS} ${SRC_SERVER_BONUS} ${TOOLS} -o ${NAME_SERVER_BONUS}
+	${CC} ${FLAGS} ${SRC_CLIENT_BONUS} ${TOOLS} -o ${NAME_CLIENT_BONUS}
 
 clean :
 	rm -rf ${OBJ}
 
 fclean : clean
-	rm -rf ${NAME_C} ${NAME_S} ${NAME_SB} ${NAME_CB}
+	rm -rf ${NAME_CLIENT} ${NAME_SERVER} ${NAME_SERVER_BONUS} ${NAME_CLIENT_BONUS}
 
 re : fclean all
 
