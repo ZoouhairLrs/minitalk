@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 22:16:05 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/06 22:11:48 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/11 17:05:48 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 void	send_signals(char c, int pid)
 {
 	int		i;
-	char	x;
+	char	shift;
 
 	i = 7;
 	while (i >= 0)
 	{
-		x = c >> i-- & 1;
-		if (x == 1)
+		shift = c >> i-- & 1;
+		if (shift == 1)
 			kill(pid, SIGUSR1);
-		else if (x == 0)
+		else if (shift == 0)
 			kill(pid, SIGUSR2);
 		usleep(1000);
 	}
