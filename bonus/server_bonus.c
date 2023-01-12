@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 23:36:43 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/12 15:32:55 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/12 16:57:55 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,8 @@ int	main(int ac, char **av)
 	pid = getpid();
 	mt_putnbr(pid);
 	mt_putstr("\n");
-	if ((sigaction(SIGUSR1, &act, NULL)) < 0)
-		mt_putstr("Err.. the signal not recieving!\n");
-	if ((sigaction(SIGUSR2, &act, NULL)) < 0)
-		mt_putstr("Err.. the signal not recieving!\n");
+	sigaction(SIGUSR1, &act, NULL);
+	sigaction(SIGUSR2, &act, NULL);
 	while (1)
 		pause();
 }
