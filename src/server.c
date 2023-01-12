@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 22:16:27 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/01/10 16:42:51 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/01/12 15:30:37 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	signal_handler(int checking, siginfo_t *info)
 	if (client_pid != info->si_pid)
 	{
 		client_pid = info->si_pid;
+		if (pool)
+			free(pool);
 		pool = 0;
 	}
 	if (checking == SIGUSR1)
