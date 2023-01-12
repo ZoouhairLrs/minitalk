@@ -6,10 +6,13 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 21:18:39 by zlaarous          #+#    #+#              #
-#    Updated: 2023/01/11 20:47:31 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/01/12 13:05:34 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+INCLUDE = ./includes/minitalk.h
+
+INCLUDE_BONUS = ./includes/minitalk_bonus.h
 
 CC = cc
 
@@ -34,10 +37,6 @@ OBJ_CLIENT_BONUS = ./bonus/client_bonus.o
 
 SRC_SERVER_BONUS = ./bonus/server_bonus.c
 OBJ_SERVER_BONUS = ./bonus/server_bonus.o
-
-INCLUDE = ./includes/minitalk.h
-
-INCLUDE_BONUS = ./includes/minitalk_bonus.h
 
 TOOLS = ./Tools/mt_atoi.c \
 		./Tools/mt_btod.c \
